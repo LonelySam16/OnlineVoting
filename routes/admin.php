@@ -41,6 +41,8 @@ $blue = rand(0, 255);
         justify-content: space-around;
         align-items: flex-end;
         flex-direction: row;
+        gap: 10px;
+
     }
 
     .histogram-bar {
@@ -48,20 +50,31 @@ $blue = rand(0, 255);
        display: flex;
        justify-content: center;
        align-items: center;
+       
+       box-shadow: 5px -2px 10px black;
        /* background-color: white; */
+       transition: transform 0.3s ;
+       
        
  
     }
+   
     .histogram-bar-cont 
     {
       margin: 0 2px;
       display: flex;
       flex-direction: column;
-      justify-content:space-around;
+      justify-content:space-between;
+      
      
+    }
+    .histogram-bar:hover
+    {
+        transform: scale(1.2);
     }
     .histogram-index
     {   
+        
         
         width: auto;
         display: flex;
@@ -106,6 +119,8 @@ $blue = rand(0, 255);
             
        <div id="profileSection">
        <center><h1>Poll Status</h1> <hr></center>
+
+       <br>
        
                 <div class="histogram-container" >
                 
@@ -129,7 +144,8 @@ $blue = rand(0, 255);
 
                         
                         <div class="histogram-index">
-                            <div style="height: 20px ;width: 20px; background-color: rgb(<?php echo $red.",".$green.",".$blue?>)">
+                            <div style="height: 20px ;width: 20px; background-color: rgb(<?php echo $red.",".$green.",".$blue?>);border: 1px solid black;
+        box-sizing: border-box;">
                             </div>
                             
                         <div>
